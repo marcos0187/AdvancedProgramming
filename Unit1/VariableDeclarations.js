@@ -6,4 +6,4 @@ console.log(`MyVar: ${MyVar}, MyLet: ${MyLet}, MyConst: ${MyConst}, HoistedVaria
 
 //Hoisting
 
-var HoistedVariable = 25;
+var HoistedVariable = 25; //var hoisted

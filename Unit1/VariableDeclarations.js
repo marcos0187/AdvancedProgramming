@@ -11,8 +11,11 @@ console.log(`myVar: ${myVar}, myLet: ${myLet}, myConst: ${myConst}, HoistedVaria
 var hoistedVariable = 25; //var hoisted
 
 //Local scope
-if (typeof myVar !== "undefined") {//Execute Context
+function aFunctionBlock(){
+if (true) {//Execute Context
     console.log(myVar);
     var myVar = 50;
     console.log(myVar);
 };
+};
+aFunctionBlock();

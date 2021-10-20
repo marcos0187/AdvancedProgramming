@@ -40,3 +40,27 @@ console.log(data);
 data.splice(2,0,3,4);
 console.log(data);
 
+//Delete elements
+data.pop();
+console.log(data);
+data.shift();
+console.log(data);
+data.splice(1,3,500);
+console.log(data);
+
+//copiar
+var friends = ["Luis", "Juan", "Pepe"];
+var bestfriends = friends.slice(1);
+
+console.log(friends);
+console.log(bestfriends);
+
+var edades = [15, 18, 24, 34];
+/*var edades = edades.map(function (currentValue,index){
+    return currentValue - 2;
+})*/
+var edades = edades.map(i => i-2);
+/*for (let i=0; i<edades.length; i++){
+    edades[i] = edades[i]-2;
+}*/
+console.log(edades);

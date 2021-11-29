@@ -1,6 +1,9 @@
+const bodyParser = require("body-parser");
 const chalk = require("chalk");
 const exPress = require("express");
 const router = exPress.Router();
+
+router.use(bodyParser.json());
 
 router.get("/raspberry", function(request, response){
     console.log(request)
@@ -17,8 +20,13 @@ router.get("/home", function(request, response){
 });
 
 router.post("/raspberry", (req, res)=>{
-    console.log(req);
-    res.send("posting")
+    res.send(req.body);
+
+    const {LedIntensity} = req.body;
+    console.log(LedIntensity);
+
+    console.log(req.body);
+    
    
 })
 

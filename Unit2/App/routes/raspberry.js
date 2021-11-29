@@ -12,7 +12,14 @@ router.get("/raspberry", function(request, response){
 router.get("/home", function(request, response){
     console.log(request)
     response.json("welcome to home");
-    console.log(chalk.gray("home was requested"));
+    console.log(chalk.gray("welcome home"));
 
 });
+
+router.post("/raspberry", (req, res)=>{
+    console.log(req);
+    res.send("posting")
+   
+})
+
 module.exports = router;
